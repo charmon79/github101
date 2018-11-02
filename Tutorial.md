@@ -31,3 +31,23 @@ This can be anything you like. I'd recommend a simple text file for now.
 
 ### Push your branch with your changes to the GitHub copy of this repository
 ```git push --set-upstream origin your-branch-name```
+
+### Open a pull request on your branch
+Easiest way to do this is through the GitHub website.
+
+A Pull Request lets others review & comment on your changes, and also provides an easy way for approved users to merge your changes into the base branch.
+
+### After you're done with your branch, delete it
+Maybe you had your branch's changes merged into another branch. Maybe you want to throw away your changes & start over. Either way, you'll want to delete your branch.
+```git branch -b your-branch-name```
+
+*Note: You'll need to be standing on a different branch first.*
+
+### Pull the master/trunk branch to get latest changes from remote to your local copy
+Pull early, pull often. Pull ALL THE TIME.
+
+Before you create a new branch from master, ALWAYS pull the latest from master.
+```git checkout master```
+```git pull```
+
+It's also a best practice to regularly pull master (or whatever your trunk branch is) and merge its latest changes into your current working branch. This lets you detect merge conflicts in your branch, *before* trying to merge your changes back to the trunk.
